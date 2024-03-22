@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="12345678910111213void build(int s, int t, int p) &#123;  &#x2F;&#x2F; 对 [s,t] 区间建立线段树,当前根的编号为 p  if (s &#x3D;&#x3D; t) &#123;    d[p] &#x3D; a[s];    return;  &#125;  int m &#x3D; s + ((t - s) &gt;&gt; 1);  &#x2F;&#x2F; 移位运算符的优先级小于加减法，所以加上括">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%AE%B5%E6%A0%91.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="12345678910111213void build(int s, int t, int p) &#123;  &#x2F;&#x2F; 对 [s,t] 区间建立线段树,当前根的编号为 p  if (s &#x3D;&#x3D; t) &#123;    d[p] &#x3D; a[s];    return;  &#125;  int m &#x3D; s + ((t - s) &gt;&gt; 1);  &#x2F;&#x2F; 移位运算符的优先级小于加减法，所以加上括">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-03-21T10:40:58.558Z">
+<meta property="article:modified_time" content="2024-03-11T07:09:34.703Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%AE%B5%E6%A0%91.html" class="article-date">
+  <time class="dt-published" datetime="2024-03-21T10:40:58.558Z" itemprop="datePublished">2024-03-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">void build(int s, int t, int p) &#123;</span><br><span class="line">  // 对 [s,t] 区间建立线段树,当前根的编号为 p</span><br><span class="line">  if (s == t) &#123;</span><br><span class="line">    d[p] = a[s];</span><br><span class="line">    return;</span><br><span class="line">  &#125;</span><br><span class="line">  int m = s + ((t - s) &gt;&gt; 1);</span><br><span class="line">  // 移位运算符的优先级小于加减法，所以加上括号</span><br><span class="line">  // 如果写成 (s + t) &gt;&gt; 1 可能会超出 int 范围</span><br><span class="line">  build(s, m, p * 2), build(m + 1, t, p * 2 + 1);</span><br><span class="line">  // 递归对左右区间建树</span><br><span class="line">  d[p] = d[p * 2] + d[(p * 2) + 1];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int getsum(int l, int r, int s, int t, int p) &#123;</span><br><span class="line">  // [l, r] 为查询区间, [s, t] 为当前节点包含的区间, p 为当前节点的编号</span><br><span class="line">  if (l &lt;= s &amp;&amp; t &lt;= r)</span><br><span class="line">    return d[p];  // 当前区间为询问区间的子集时直接返回当前区间的和</span><br><span class="line">  int m = s + ((t - s) &gt;&gt; 1), sum = 0;</span><br><span class="line">  if (l &lt;= m) sum += getsum(l, r, s, m, p * 2);</span><br><span class="line">  // 如果左儿子代表的区间 [s, m] 与询问区间有交集, 则递归查询左儿子</span><br><span class="line">  if (r &gt; m) sum += getsum(l, r, m + 1, t, p * 2 + 1);</span><br><span class="line">  // 如果右儿子代表的区间 [m + 1, t] 与询问区间有交集, 则递归查询右儿子</span><br><span class="line">  return sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用懒标记的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">void update(int l, int r, int c, int s, int t, int p) &#123;</span><br><span class="line">  // [l, r] 为修改区间, c 为被修改的元素的变化量, [s, t] 为当前节点包含的区间, p</span><br><span class="line">  // 为当前节点的编号</span><br><span class="line">  if (l &lt;= s &amp;&amp; t &lt;= r) &#123;</span><br><span class="line">    d[p] += (t - s + 1) * c, b[p] += c;</span><br><span class="line">    return;</span><br><span class="line">  &#125;  // 当前区间为修改区间的子集时直接修改当前节点的值,然后打标记,结束修改</span><br><span class="line">  int m = s + ((t - s) &gt;&gt; 1);</span><br><span class="line">  if (b[p] &amp;&amp; s != t) &#123;</span><br><span class="line">    // 如果当前节点的懒标记非空,则更新当前节点两个子节点的值和懒标记值</span><br><span class="line">    d[p * 2] += b[p] * (m - s + 1), d[p * 2 + 1] += b[p] * (t - m);</span><br><span class="line">    b[p * 2] += b[p], b[p * 2 + 1] += b[p];  // 将标记下传给子节点</span><br><span class="line">    b[p] = 0;                                // 清空当前节点的标记</span><br><span class="line">  &#125;</span><br><span class="line">  if (l &lt;= m) update(l, r, c, s, m, p * 2);</span><br><span class="line">  if (r &gt; m) update(l, r, c, m + 1, t, p * 2 + 1);</span><br><span class="line">  d[p] = d[p * 2] + d[p * 2 + 1];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">int getsum(int l, int r, int s, int t, int p) &#123;</span><br><span class="line">  // [l, r] 为查询区间, [s, t] 为当前节点包含的区间, p 为当前节点的编号</span><br><span class="line">  if (l &lt;= s &amp;&amp; t &lt;= r) return d[p];</span><br><span class="line">  // 当前区间为询问区间的子集时直接返回当前区间的和</span><br><span class="line">  int m = s + ((t - s) &gt;&gt; 1);</span><br><span class="line">  if (b[p]) &#123;</span><br><span class="line">    // 如果当前节点的懒标记非空,则更新当前节点两个子节点的值和懒标记值</span><br><span class="line">    d[p * 2] += b[p] * (m - s + 1), d[p * 2 + 1] += b[p] * (t - m);</span><br><span class="line">    b[p * 2] += b[p], b[p * 2 + 1] += b[p];  // 将标记下传给子节点</span><br><span class="line">    b[p] = 0;                                // 清空当前节点的标记</span><br><span class="line">  &#125;</span><br><span class="line">  int sum = 0;</span><br><span class="line">  if (l &lt;= m) sum = getsum(l, r, s, m, p * 2);</span><br><span class="line">  if (r &gt; m) sum += getsum(l, r, m + 1, t, p * 2 + 1);</span><br><span class="line">  return sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你是要实现区间修改为某一个值而不是加上某一个值的话，代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">void update(int l, int r, int c, int s, int t, int p) &#123;</span><br><span class="line">  if (l &lt;= s &amp;&amp; t &lt;= r) &#123;</span><br><span class="line">    d[p] = (t - s + 1) * c, b[p] = c;</span><br><span class="line">    return;</span><br><span class="line">  &#125;</span><br><span class="line">  int m = s + ((t - s) &gt;&gt; 1);</span><br><span class="line">  // 额外数组储存是否修改值</span><br><span class="line">  if (v[p]) &#123;</span><br><span class="line">    d[p * 2] = b[p] * (m - s + 1), d[p * 2 + 1] = b[p] * (t - m);</span><br><span class="line">    b[p * 2] = b[p * 2 + 1] = b[p];</span><br><span class="line">    v[p * 2] = v[p * 2 + 1] = 1;</span><br><span class="line">    v[p] = 0;</span><br><span class="line">  &#125;</span><br><span class="line">  if (l &lt;= m) update(l, r, c, s, m, p * 2);</span><br><span class="line">  if (r &gt; m) update(l, r, c, m + 1, t, p * 2 + 1);</span><br><span class="line">  d[p] = d[p * 2] + d[p * 2 + 1];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int getsum(int l, int r, int s, int t, int p) &#123;</span><br><span class="line">  if (l &lt;= s &amp;&amp; t &lt;= r) return d[p];</span><br><span class="line">  int m = s + ((t - s) &gt;&gt; 1);</span><br><span class="line">  if (v[p]) &#123;</span><br><span class="line">    d[p * 2] = b[p] * (m - s + 1), d[p * 2 + 1] = b[p] * (t - m);</span><br><span class="line">    b[p * 2] = b[p * 2 + 1] = b[p];</span><br><span class="line">    v[p * 2] = v[p * 2 + 1] = 1;</span><br><span class="line">    v[p] = 0;</span><br><span class="line">  &#125;</span><br><span class="line">  int sum = 0;</span><br><span class="line">  if (l &lt;= m) sum = getsum(l, r, s, m, p * 2);</span><br><span class="line">  if (r &gt; m) sum += getsum(l, r, m + 1, t, p * 2 + 1);</span><br><span class="line">  return sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%AE%B5%E6%A0%91.html" data-id="clu2gss2r000m18x06yq67fs6" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/03/21/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
