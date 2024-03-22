@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="原来一种物品有 s 个可以把这 s 个打包成 log(s)个“组合”然后对这些“组合”进行01背包这些“组合”能够通过不同的选法来表示出原来这种物品选择任意个放入背包中类似倍增的打包方法Ey1：10打包 1、2、4、3Ey2：20打包1、2、4、8、5可以在输入的时候就打包了 1234567891011121314151617181920212223242526272829303132333435">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2024/03/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BC%98%E5%8C%96%E5%A4%9A%E9%87%8D%E8%83%8C%E5%8C%85/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="原来一种物品有 s 个可以把这 s 个打包成 log(s)个“组合”然后对这些“组合”进行01背包这些“组合”能够通过不同的选法来表示出原来这种物品选择任意个放入背包中类似倍增的打包方法Ey1：10打包 1、2、4、3Ey2：20打包1、2、4、8、5可以在输入的时候就打包了 1234567891011121314151617181920212223242526272829303132333435">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-03-22T09:33:55.891Z">
+<meta property="article:modified_time" content="2024-03-11T07:09:28.833Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-动态规划/二进制优化多重背包" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BC%98%E5%8C%96%E5%A4%9A%E9%87%8D%E8%83%8C%E5%8C%85/" class="article-date">
+  <time class="dt-published" datetime="2024-03-22T09:33:55.891Z" itemprop="datePublished">2024-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>原来一种物品有 s 个<br>可以把这 s 个打包成 log(s)个“组合”<br>然后对这些“组合”进行01背包<br>这些“组合”能够通过不同的选法来<br>表示出原来这种物品选择任意个放入背包中<br>类似倍增的打包方法<br>Ey1：10打包 1、2、4、3<br>Ey2：20打包1、2、4、8、5<br>可以在输入的时候就打包了</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PII pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> map unordered_map</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> x first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> y second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> endl <span class="string">&quot;\n&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> debug(x) cout &lt;&lt; #x &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; x &lt;&lt; endl;</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1010</span>;</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">GOOD</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> v, w;</span><br><span class="line">&#125;;</span><br><span class="line">vector&lt;GOOD&gt; goods;</span><br><span class="line"><span class="type">int</span> dp[<span class="number">2020</span>];</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// freopen(&quot;.in&quot;, &quot;r&quot;, stdin);</span></span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> v, w, s;</span><br><span class="line">        cin &gt;&gt; v &gt;&gt; w &gt;&gt; s;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= s; j *= <span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            goods.<span class="built_in">push_back</span>(&#123;v * j, w * j&#125;);</span><br><span class="line">            s -= j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (s &gt; <span class="number">0</span>)</span><br><span class="line">            goods.<span class="built_in">push_back</span>(&#123;v * s, w * s&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> good : goods)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = m; i &gt;= good.v; i--)</span><br><span class="line">        &#123;</span><br><span class="line">            dp[i] = <span class="built_in">max</span>(dp[i], dp[i - good.v] + good.w);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; dp[m] &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BC%98%E5%8C%96%E5%A4%9A%E9%87%8D%E8%83%8C%E5%8C%85/" data-id="clu2h2f9w0006gsx020t75fnm" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/03/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E5%88%86%E7%BB%84%E8%83%8C%E5%8C%85/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/03/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/03/22/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/22/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/22/vscode/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/22/vim/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/22/trie%E7%9A%84%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

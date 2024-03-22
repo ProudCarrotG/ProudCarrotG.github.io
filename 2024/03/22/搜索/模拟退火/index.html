@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960#include &lt;bits&#x2F;stdc++.h&gt;using namespace std;int ans &#x3D; INT_MIN;double rand(double l,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2024/03/22/%E6%90%9C%E7%B4%A2/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960#include &lt;bits&#x2F;stdc++.h&gt;using namespace std;int ans &#x3D; INT_MIN;double rand(double l,">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-03-22T09:33:56.014Z">
+<meta property="article:modified_time" content="2024-03-11T07:09:37.070Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-搜索/模拟退火" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/22/%E6%90%9C%E7%B4%A2/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/" class="article-date">
+  <time class="dt-published" datetime="2024-03-22T09:33:56.014Z" itemprop="datePublished">2024-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int ans = INT_MIN;</span><br><span class="line">double rand(double l, double r)</span><br><span class="line">&#123;</span><br><span class="line">    return (double)rand() / RAND_MAX * (r - l) + l;</span><br><span class="line"></span><br><span class="line">    //注意:用rand函数求数组下标时需要做出变化,因为右边界r取到的概率和其他值的概率不同</span><br><span class="line">    /*</span><br><span class="line">    int res=(double)rand() / RAND_MAX * (r + 1 - l) + l;</span><br><span class="line">    if(res &lt; r + 1)</span><br><span class="line">        return res;</span><br><span class="line">    else</span><br><span class="line">        return r;</span><br><span class="line">    */</span><br><span class="line">&#125; //模拟退火需要在一个区间内取随机数，l、r为区间范围</span><br><span class="line">// val(x):解为x时求对应的值</span><br><span class="line">int val(int x)</span><br><span class="line">&#123;</span><br><span class="line">    int res;</span><br><span class="line">    //根据题意求res</span><br><span class="line">    </span><br><span class="line">    ans=min(ans,res);//保存模拟退火的最终解,每次都保留最符合题意的</span><br><span class="line">    return res;</span><br><span class="line">&#125;</span><br><span class="line">void simulate_anneal()</span><br><span class="line">&#123;</span><br><span class="line">    int now = rand(l, r); //在l,r之间取一个初值</span><br><span class="line">    //初始温度一般较高 如1e4等</span><br><span class="line">    //结束温度一般接近0 如1e-8等</span><br><span class="line">    //下降速率一般接近1 如0.99  or  0.9999940</span><br><span class="line">    //这三个值都是需要调才能出结果</span><br><span class="line">    for (double T = /*初始温度*/; T &gt;= /*结束温度*/; T *= /*下降速率*/)</span><br><span class="line">    &#123;</span><br><span class="line">        int next = rand(now - T, now + T); //由温度的限制取得下一个解</span><br><span class="line">        //求最小值</span><br><span class="line">        //根据公式判断是否接受新解</span><br><span class="line">        //当新解的值大于旧解的值时,-(val(next) - val(now))小于0,则新解不一定更优,按一定概率接受</span><br><span class="line">        //当新解的值小于旧解的值时,exp(-(val(next) - val(now)) / T)大于1,一定接受</span><br><span class="line">        if (exp(-(val(next) - val(now)) / T) &gt; rand(0, 1))</span><br><span class="line">            now = next;</span><br><span class="line">        //求最大值,把负号去掉</span><br><span class="line">        /*</span><br><span class="line">        if (exp((val(next) - val(now)) / T) &gt; rand(0, 1))</span><br><span class="line">            now = next;</span><br><span class="line">        */</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    srand(time(0)); //设置随机数种子</span><br><span class="line">    // clock():计时函数,返回程序从启动到函数调用占用CPU的时间</span><br><span class="line">    // CLOCKS_PER_SEC是标准c的time.h头函数中宏定义的一个常数，表示一秒钟内CPU运行的时钟周期数</span><br><span class="line">    //这个循环可以控制程序在不停的做模拟退火,直到把能用的时间用完</span><br><span class="line">    while ((double)clock() / (CLOCKS_PER_SEC * 1) &lt; 0.9)</span><br><span class="line">        simulate_anneal();</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/22/%E6%90%9C%E7%B4%A2/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB/" data-id="clu2h2fa5000ggsx0eo0icby6" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/03/22/%E6%90%9C%E7%B4%A2/%E8%BF%AD%E4%BB%A3%E5%8A%A0%E6%B7%B1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/03/22/%E6%95%B0%E8%AE%BA/%E9%80%86%E5%85%83/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/03/22/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/22/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/22/vscode/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/22/vim/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/22/trie%E7%9A%84%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

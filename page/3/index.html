@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-数论/快速幂" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/22/%E6%95%B0%E8%AE%BA/%E5%BF%AB%E9%80%9F%E5%B9%82/" class="article-date">
+  <time class="dt-published" datetime="2024-03-22T09:33:55.953Z" itemprop="datePublished">2024-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">long long qmi(LL a, LL b, LL p) &#123;</span><br><span class="line">    LL ans = 1;</span><br><span class="line">    while (b) &#123;</span><br><span class="line">        if (b &amp; 1)</span><br><span class="line">            ans = (LL)(ans * a) % p;</span><br><span class="line">        a = (LL)(a * a) % p;</span><br><span class="line">        b &gt;&gt;= 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/22/%E6%95%B0%E8%AE%BA/%E5%BF%AB%E9%80%9F%E5%B9%82/" data-id="clu2h2fa9000mgsx08s5s18u4" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-数论/容斥" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/22/%E6%95%B0%E8%AE%BA/%E5%AE%B9%E6%96%A5/" class="article-date">
+  <time class="dt-published" datetime="2024-03-22T09:33:55.949Z" itemprop="datePublished">2024-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/assets/Pasted%20image%2020231101193125.png"></p>
+<p><img src="/assets/Pasted%20image%2020231101193109.png"></p>
+<p><img src="/assets/Pasted%20image%2020231101193134.png">.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PII pair<span class="string">&lt;int, int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> map unordered_map</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> x first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> y second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> endl <span class="string">&quot;\n&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> debug(x) cout &lt;&lt; #x &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; x &lt;&lt; endl;</span></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> p[<span class="number">20</span>];</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;.in&quot;</span>, <span class="string">&quot;r&quot;</span>, stdin);</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++)</span><br><span class="line">        cin &gt;&gt; p[i];</span><br><span class="line">    <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; (<span class="number">1</span> &lt;&lt; m); i++)  <span class="comment">// 枚举每一种组合</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> t = <span class="number">1</span>, cnt = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; m; j++)  <span class="comment">// 逐位求出该位对应的数是不是在组合中</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (i &gt;&gt; j &amp; <span class="number">1</span>)  <span class="comment">// 是的话就记录</span></span><br><span class="line">            &#123;</span><br><span class="line">                cnt++;</span><br><span class="line">                <span class="keyword">if</span> (t * p[j] &gt; n) &#123;</span><br><span class="line">                    t = <span class="number">-1</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                t *= p[j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (t != <span class="number">-1</span>)  <span class="comment">// 计算这一项组合对答案的贡献</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (cnt % <span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">                res += n / t;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                res -= n / t;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; res;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/22/%E6%95%B0%E8%AE%BA/%E5%AE%B9%E6%96%A5/" data-id="clu2h2faa000ngsx02u20dzl3" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-数论/坐标旋转" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/22/%E6%95%B0%E8%AE%BA/%E5%9D%90%E6%A0%87%E6%97%8B%E8%BD%AC/" class="article-date">
+  <time class="dt-published" datetime="2024-03-22T09:33:55.945Z" itemprop="datePublished">2024-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/assets/Pasted%20image%2020231101194918.png"><br><img src="/assets/Pasted%20image%2020231101194928.png"><br><img src="/assets/Pasted%20image%2020231101194934.png"><br><img src="/assets/Pasted%20image%2020231101194940.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/22/%E6%95%B0%E8%AE%BA/%E5%9D%90%E6%A0%87%E6%97%8B%E8%BD%AC/" data-id="clu2h2fa8000lgsx0g0sl65if" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-数据结构/线段树" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%AE%B5%E6%A0%91/" class="article-date">
+  <time class="dt-published" datetime="2024-03-22T09:33:55.929Z" itemprop="datePublished">2024-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">void build(int s, int t, int p) &#123;</span><br><span class="line">  // 对 [s,t] 区间建立线段树,当前根的编号为 p</span><br><span class="line">  if (s == t) &#123;</span><br><span class="line">    d[p] = a[s];</span><br><span class="line">    return;</span><br><span class="line">  &#125;</span><br><span class="line">  int m = s + ((t - s) &gt;&gt; 1);</span><br><span class="line">  // 移位运算符的优先级小于加减法，所以加上括号</span><br><span class="line">  // 如果写成 (s + t) &gt;&gt; 1 可能会超出 int 范围</span><br><span class="line">  build(s, m, p * 2), build(m + 1, t, p * 2 + 1);</span><br><span class="line">  // 递归对左右区间建树</span><br><span class="line">  d[p] = d[p * 2] + d[(p * 2) + 1];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int getsum(int l, int r, int s, int t, int p) &#123;</span><br><span class="line">  // [l, r] 为查询区间, [s, t] 为当前节点包含的区间, p 为当前节点的编号</span><br><span class="line">  if (l &lt;= s &amp;&amp; t &lt;= r)</span><br><span class="line">    return d[p];  // 当前区间为询问区间的子集时直接返回当前区间的和</span><br><span class="line">  int m = s + ((t - s) &gt;&gt; 1), sum = 0;</span><br><span class="line">  if (l &lt;= m) sum += getsum(l, r, s, m, p * 2);</span><br><span class="line">  // 如果左儿子代表的区间 [s, m] 与询问区间有交集, 则递归查询左儿子</span><br><span class="line">  if (r &gt; m) sum += getsum(l, r, m + 1, t, p * 2 + 1);</span><br><span class="line">  // 如果右儿子代表的区间 [m + 1, t] 与询问区间有交集, 则递归查询右儿子</span><br><span class="line">  return sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用懒标记的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">void update(int l, int r, int c, int s, int t, int p) &#123;</span><br><span class="line">  // [l, r] 为修改区间, c 为被修改的元素的变化量, [s, t] 为当前节点包含的区间, p</span><br><span class="line">  // 为当前节点的编号</span><br><span class="line">  if (l &lt;= s &amp;&amp; t &lt;= r) &#123;</span><br><span class="line">    d[p] += (t - s + 1) * c, b[p] += c;</span><br><span class="line">    return;</span><br><span class="line">  &#125;  // 当前区间为修改区间的子集时直接修改当前节点的值,然后打标记,结束修改</span><br><span class="line">  int m = s + ((t - s) &gt;&gt; 1);</span><br><span class="line">  if (b[p] &amp;&amp; s != t) &#123;</span><br><span class="line">    // 如果当前节点的懒标记非空,则更新当前节点两个子节点的值和懒标记值</span><br><span class="line">    d[p * 2] += b[p] * (m - s + 1), d[p * 2 + 1] += b[p] * (t - m);</span><br><span class="line">    b[p * 2] += b[p], b[p * 2 + 1] += b[p];  // 将标记下传给子节点</span><br><span class="line">    b[p] = 0;                                // 清空当前节点的标记</span><br><span class="line">  &#125;</span><br><span class="line">  if (l &lt;= m) update(l, r, c, s, m, p * 2);</span><br><span class="line">  if (r &gt; m) update(l, r, c, m + 1, t, p * 2 + 1);</span><br><span class="line">  d[p] = d[p * 2] + d[p * 2 + 1];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">int getsum(int l, int r, int s, int t, int p) &#123;</span><br><span class="line">  // [l, r] 为查询区间, [s, t] 为当前节点包含的区间, p 为当前节点的编号</span><br><span class="line">  if (l &lt;= s &amp;&amp; t &lt;= r) return d[p];</span><br><span class="line">  // 当前区间为询问区间的子集时直接返回当前区间的和</span><br><span class="line">  int m = s + ((t - s) &gt;&gt; 1);</span><br><span class="line">  if (b[p]) &#123;</span><br><span class="line">    // 如果当前节点的懒标记非空,则更新当前节点两个子节点的值和懒标记值</span><br><span class="line">    d[p * 2] += b[p] * (m - s + 1), d[p * 2 + 1] += b[p] * (t - m);</span><br><span class="line">    b[p * 2] += b[p], b[p * 2 + 1] += b[p];  // 将标记下传给子节点</span><br><span class="line">    b[p] = 0;                                // 清空当前节点的标记</span><br><span class="line">  &#125;</span><br><span class="line">  int sum = 0;</span><br><span class="line">  if (l &lt;= m) sum = getsum(l, r, s, m, p * 2);</span><br><span class="line">  if (r &gt; m) sum += getsum(l, r, m + 1, t, p * 2 + 1);</span><br><span class="line">  return sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你是要实现区间修改为某一个值而不是加上某一个值的话，代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">void update(int l, int r, int c, int s, int t, int p) &#123;</span><br><span class="line">  if (l &lt;= s &amp;&amp; t &lt;= r) &#123;</span><br><span class="line">    d[p] = (t - s + 1) * c, b[p] = c;</span><br><span class="line">    return;</span><br><span class="line">  &#125;</span><br><span class="line">  int m = s + ((t - s) &gt;&gt; 1);</span><br><span class="line">  // 额外数组储存是否修改值</span><br><span class="line">  if (v[p]) &#123;</span><br><span class="line">    d[p * 2] = b[p] * (m - s + 1), d[p * 2 + 1] = b[p] * (t - m);</span><br><span class="line">    b[p * 2] = b[p * 2 + 1] = b[p];</span><br><span class="line">    v[p * 2] = v[p * 2 + 1] = 1;</span><br><span class="line">    v[p] = 0;</span><br><span class="line">  &#125;</span><br><span class="line">  if (l &lt;= m) update(l, r, c, s, m, p * 2);</span><br><span class="line">  if (r &gt; m) update(l, r, c, m + 1, t, p * 2 + 1);</span><br><span class="line">  d[p] = d[p * 2] + d[p * 2 + 1];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int getsum(int l, int r, int s, int t, int p) &#123;</span><br><span class="line">  if (l &lt;= s &amp;&amp; t &lt;= r) return d[p];</span><br><span class="line">  int m = s + ((t - s) &gt;&gt; 1);</span><br><span class="line">  if (v[p]) &#123;</span><br><span class="line">    d[p * 2] = b[p] * (m - s + 1), d[p * 2 + 1] = b[p] * (t - m);</span><br><span class="line">    b[p * 2] = b[p * 2 + 1] = b[p];</span><br><span class="line">    v[p * 2] = v[p * 2 + 1] = 1;</span><br><span class="line">    v[p] = 0;</span><br><span class="line">  &#125;</span><br><span class="line">  int sum = 0;</span><br><span class="line">  if (l &lt;= m) sum = getsum(l, r, s, m, p * 2);</span><br><span class="line">  if (r &gt; m) sum += getsum(l, r, m + 1, t, p * 2 + 1);</span><br><span class="line">  return sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%AE%B5%E6%A0%91/" data-id="clu2h2fa8000kgsx0a3qv5upk" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-数据结构/树链剖分" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/" class="article-date">
+  <time class="dt-published" datetime="2024-03-22T09:33:55.925Z" itemprop="datePublished">2024-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="树链剖分－重链剖分"><a href="#树链剖分－重链剖分" class="headerlink" title="树链剖分－重链剖分"></a>树链剖分－重链剖分</h1><h2 id="什么是树链剖分呢？"><a href="#什么是树链剖分呢？" class="headerlink" title="什么是树链剖分呢？"></a>什么是树链剖分呢？</h2><p>是对一棵树进行链式剖分，将一棵树分成若干条链，常用来解决树上任意两点之间的问题，例如求两点之间的$lca$，两点之间的点权之和，两点之间的距离等</p>
+<p>关键点在于树链剖分给树上的节点以dfs序重新进行了一次编号，这个编号的特性使得点与点之间呈一个连续的关系，让树转变成一个一维的数组来处理问题</p>
+<h2 id="重链剖分"><a href="#重链剖分" class="headerlink" title="重链剖分"></a>重链剖分</h2><h3 id="”重量“"><a href="#”重量“" class="headerlink" title="”重量“"></a>”重量“</h3><p>一个节点的”重量“，定义为以这个节点为根的子树节点数量，也就是说：这个节点之后的节点越多，重量越高</p>
+<h3 id="重儿子"><a href="#重儿子" class="headerlink" title="重儿子"></a>重儿子</h3><p>众所周知，树上一个节点会有很多的儿子，其中<strong>重量</strong>最重（<strong>子树节点</strong>最多）的儿子被定义为重儿子，其余的节点称为亲儿子</p>
+<h3 id="重链"><a href="#重链" class="headerlink" title="重链"></a>重链</h3><p>在树上的一条链，以某一个<strong>亲儿子</strong>为起点，之后的所有节点都是<strong>重儿子</strong>；</p>
+<p>重链的长度会尽可能的长，而在重链分出去的其他重链长度就会不及这条重链的一半</p>
+<h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><h4 id="第一次的dfs"><a href="#第一次的dfs" class="headerlink" title="第一次的dfs"></a>第一次的dfs</h4><p>根据上面的内容，我们发现想要剖分出一条链需要先知道所有节点的重儿子是谁，想要求出重儿子，需要知道子树的大小</p>
+<p>用$son[x]$来表示$x$节点的重儿子，$sz[x]$表示以$x$为根的子树大小，$fa[x]$表示$x$的父亲，一是防止往回搜索，二是之后需要用到</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs1</span><span class="params">(<span class="type">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    sz[u] = <span class="number">1</span>;<span class="comment">//sz要算上自己</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> v : edge[u])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (v == fa[u])<span class="comment">//如果v是父亲就跳过</span></span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">        fa[v] = u;<span class="comment">//从u走到v，则u是v的父亲</span></span><br><span class="line">        <span class="built_in">dfs1</span>(v); <span class="comment">//去处理v的信息</span></span><br><span class="line">        sz[u] += sz[v];<span class="comment">//更新子树大小</span></span><br><span class="line">        <span class="keyword">if</span> (!son[u] || sz[v] &gt; sz[son[u]])<span class="comment">//如果没有重节点，或者当前的v比之前的重节点更重</span></span><br><span class="line">            son[u] = v;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这样就维护好了每个节点的重儿子和父亲</p>
+<h4 id="第二次的dfs"><a href="#第二次的dfs" class="headerlink" title="第二次的dfs"></a>第二次的dfs</h4><p>开始剖分链，用$top[x]$来记录当前节点所在链的头节点，这样就可以区分出某一个节点所属的链；$dfn[x]$记录节点的dfs序</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs2</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> tp)</span></span>&#123;<span class="comment">//tp：链的头节点</span></span><br><span class="line">    top[u] = tp;<span class="comment">//将当前节点加入到链中</span></span><br><span class="line"></span><br><span class="line">    dfn[u] = ++idx;<span class="comment">//更新当前节点的dfs序</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (son[u])</span><br><span class="line">        <span class="built_in">dfs2</span>(son[u], tp);<span class="comment">//如果存在重儿子就先去搜索重儿子</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> v : edge[u])&#123;<span class="comment">//轻儿子</span></span><br><span class="line">        <span class="keyword">if</span> (v != son[u] &amp;&amp; v != fa[u])</span><br><span class="line">            <span class="built_in">dfs2</span>(v, v);<span class="comment">//轻儿子和当前节点不在同一条链上，以轻儿子为起点重新创建一条新链</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>第二次的dfs就给每个节点分配到了一条链上，并且重新对其做了编号</p>
+<h3 id="有什么用？"><a href="#有什么用？" class="headerlink" title="有什么用？"></a>有什么用？</h3><p>树上的节点被剖分成一条条重链，重链剖分使得先出现的重链尽可能的长，而dfs序也改变成所在重链更长的节点，dfs序会更小，并且一条重链上的节点dfs序是连续的，越靠后的节点dfs序越大。</p>
+<h4 id="链的用法"><a href="#链的用法" class="headerlink" title="链的用法"></a>链的用法</h4><p>树上的链式结构使得每一个节点都可以快速的向上寻找一个标志节点，即当前重链的头节点。除了root,所有的重链头节点的父亲节点，都指向另一条重链。</p>
+<p>求LCA时就可以将重链靠下（dfs序更大）的节点往上跳，直到两个节点在同一个重链时，靠上的节点就为lca；时间复杂度为常数很小的$O(logn)$</p>
+<h4 id="dfs序的用法"><a href="#dfs序的用法" class="headerlink" title="dfs序的用法"></a>dfs序的用法</h4><p>因为同一条链的的每个节点dfs序是连续递增的，所以可以用线段数&#x2F;树状数组快速的求出某个节点到链头节点的区间$[dfn(top[x]), dfn[x]]$的内容，也可以对其进行修改。</p>
+<p>可以用来快速的求出树上任意两个节点之间的路径(其实也就是  节点a－lca(a,b)－节点b)</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">qry</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> res;</span><br><span class="line">    <span class="keyword">while</span> (top[u] != top[v]) <span class="comment">// 跳至同一条重链</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (dfn[u] &lt; dfn[v])</span><br><span class="line">            <span class="built_in">swap</span>(u, v); <span class="comment">// 先跳靠后的节点</span></span><br><span class="line"></span><br><span class="line">        res += <span class="built_in">get_sum</span>(dfn[top[u]], dfn[u]); <span class="comment">// 获得u节点到top[u]的信息，并更新res的信息</span></span><br><span class="line"></span><br><span class="line">        u = fa[top[u]]; <span class="comment">// 更新u</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (dfn[u] &gt; dfn[v])</span><br><span class="line">        <span class="built_in">swap</span>(u, v); <span class="comment">// 调整u，v顺序</span></span><br><span class="line"></span><br><span class="line">    res += <span class="built_in">get_sum</span>(dfn[u], dfn[v]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>在使用线段数或树状数组时，以dfs序为标准往数组里放数</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/" data-id="clu2h2fa7000jgsx00048225f" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-数据结构/树链剖分 1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86%201/" class="article-date">
+  <time class="dt-published" datetime="2024-03-22T09:33:55.923Z" itemprop="datePublished">2024-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="树链剖分－重链剖分"><a href="#树链剖分－重链剖分" class="headerlink" title="树链剖分－重链剖分"></a>树链剖分－重链剖分</h1><h2 id="什么是树链剖分呢？"><a href="#什么是树链剖分呢？" class="headerlink" title="什么是树链剖分呢？"></a>什么是树链剖分呢？</h2><p>是对一棵树进行链式剖分，将一棵树分成若干条链，常用来解决树上任意两点之间的问题，例如求两点之间的$lca$，两点之间的点权之和，两点之间的距离等</p>
+<p>关键点在于树链剖分给树上的节点以dfs序重新进行了一次编号，这个编号的特性使得点与点之间呈一个连续的关系，让树转变成一个一维的数组来处理问题</p>
+<h2 id="重链剖分"><a href="#重链剖分" class="headerlink" title="重链剖分"></a>重链剖分</h2><h3 id="”重量“"><a href="#”重量“" class="headerlink" title="”重量“"></a>”重量“</h3><p>一个节点的”重量“，定义为以这个节点为根的子树节点数量，也就是说：这个节点之后的节点越多，重量越高</p>
+<h3 id="重儿子"><a href="#重儿子" class="headerlink" title="重儿子"></a>重儿子</h3><p>众所周知，树上一个节点会有很多的儿子，其中<strong>重量</strong>最重（<strong>子树节点</strong>最多）的儿子被定义为重儿子，其余的节点称为亲儿子</p>
+<h3 id="重链"><a href="#重链" class="headerlink" title="重链"></a>重链</h3><p>在树上的一条链，以某一个<strong>亲儿子</strong>为起点，之后的所有节点都是<strong>重儿子</strong>；</p>
+<p>重链的长度会尽可能的长，而在重链分出去的其他重链长度就会不及这条重链的一半</p>
+<h3 id="怎么做"><a href="#怎么做" class="headerlink" title="怎么做"></a>怎么做</h3><h4 id="第一次的dfs"><a href="#第一次的dfs" class="headerlink" title="第一次的dfs"></a>第一次的dfs</h4><p>根据上面的内容，我们发现想要剖分出一条链需要先知道所有节点的重儿子是谁，想要求出重儿子，需要知道子树的大小</p>
+<p>用$son[x]$来表示$x$节点的重儿子，$sz[x]$表示以$x$为根的子树大小，$fa[x]$表示$x$的父亲，一是防止往回搜索，二是之后需要用到</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs1</span><span class="params">(<span class="type">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    sz[u] = <span class="number">1</span>;<span class="comment">//sz要算上自己</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> v : edge[u])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (v == fa[u])<span class="comment">//如果v是父亲就跳过</span></span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">        fa[v] = u;<span class="comment">//从u走到v，则u是v的父亲</span></span><br><span class="line">        <span class="built_in">dfs1</span>(v); <span class="comment">//去处理v的信息</span></span><br><span class="line">        sz[u] += sz[v];<span class="comment">//更新子树大小</span></span><br><span class="line">        <span class="keyword">if</span> (!son[u] || sz[v] &gt; sz[son[u]])<span class="comment">//如果没有重节点，或者当前的v比之前的重节点更重</span></span><br><span class="line">            son[u] = v;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这样就维护好了每个节点的重儿子和父亲</p>
+<h4 id="第二次的dfs"><a href="#第二次的dfs" class="headerlink" title="第二次的dfs"></a>第二次的dfs</h4><p>开始剖分链，用$top[x]$来记录当前节点所在链的头节点，这样就可以区分出某一个节点所属的链；$dfn[x]$记录节点的dfs序</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs2</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> tp)</span></span>&#123;<span class="comment">//tp：链的头节点</span></span><br><span class="line">    top[u] = tp;<span class="comment">//将当前节点加入到链中</span></span><br><span class="line"></span><br><span class="line">    dfn[u] = ++idx;<span class="comment">//更新当前节点的dfs序</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (son[u])</span><br><span class="line">        <span class="built_in">dfs2</span>(son[u], tp);<span class="comment">//如果存在重儿子就先去搜索重儿子</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> v : edge[u])&#123;<span class="comment">//轻儿子</span></span><br><span class="line">        <span class="keyword">if</span> (v != son[u] &amp;&amp; v != fa[u])</span><br><span class="line">            <span class="built_in">dfs2</span>(v, v);<span class="comment">//轻儿子和当前节点不在同一条链上，以轻儿子为起点重新创建一条新链</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>第二次的dfs就给每个节点分配到了一条链上，并且重新对其做了编号</p>
+<h3 id="有什么用？"><a href="#有什么用？" class="headerlink" title="有什么用？"></a>有什么用？</h3><p>树上的节点被剖分成一条条重链，重链剖分使得先出现的重链尽可能的长，而dfs序也改变成所在重链更长的节点，dfs序会更小，并且一条重链上的节点dfs序是连续的，越靠后的节点dfs序越大。</p>
+<h4 id="链的用法"><a href="#链的用法" class="headerlink" title="链的用法"></a>链的用法</h4><p>树上的链式结构使得每一个节点都可以快速的向上寻找一个标志节点，即当前重链的头节点。除了root,所有的重链头节点的父亲节点，都指向另一条重链。</p>
+<p>求LCA时就可以将重链靠下（dfs序更大）的节点往上跳，直到两个节点在同一个重链时，靠上的节点就为lca；时间复杂度为常数很小的$O(logn)$</p>
+<h4 id="dfs序的用法"><a href="#dfs序的用法" class="headerlink" title="dfs序的用法"></a>dfs序的用法</h4><p>因为同一条链的的每个节点dfs序是连续递增的，所以可以用线段数&#x2F;树状数组快速的求出某个节点到链头节点的区间$[dfn(top[x]), dfn[x]]$的内容，也可以对其进行修改。</p>
+<p>可以用来快速的求出树上任意两个节点之间的路径(其实也就是  节点a－lca(a,b)－节点b)</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">qry</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> res;</span><br><span class="line">    <span class="keyword">while</span> (top[u] != top[v]) <span class="comment">// 跳至同一条重链</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (dfn[u] &lt; dfn[v])</span><br><span class="line">            <span class="built_in">swap</span>(u, v); <span class="comment">// 先跳靠后的节点</span></span><br><span class="line"></span><br><span class="line">        res += <span class="built_in">get_sum</span>(dfn[top[u]], dfn[u]); <span class="comment">// 获得u节点到top[u]的信息，并更新res的信息</span></span><br><span class="line"></span><br><span class="line">        u = fa[top[u]]; <span class="comment">// 更新u</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (dfn[u] &gt; dfn[v])</span><br><span class="line">        <span class="built_in">swap</span>(u, v); <span class="comment">// 调整u，v顺序</span></span><br><span class="line"></span><br><span class="line">    res += <span class="built_in">get_sum</span>(dfn[u], dfn[v]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>在使用线段数或树状数组时，以dfs序为标准往数组里放数</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86%201/" data-id="clu2h2fa6000igsx08f0i3u9g" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-数据结构/树状数组" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" class="article-date">
+  <time class="dt-published" datetime="2024-03-22T09:33:55.920Z" itemprop="datePublished">2024-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/assets/Pasted%20image%2020231101201112.png"></p>
+<p>树状数组求的是一个前缀和，求区间和的话要减去区间左端点之前的和</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int lowbit(int x)</span><br><span class="line">&#123;</span><br><span class="line">    return x &amp; -x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int sum(int x)</span><br><span class="line">&#123;</span><br><span class="line">    int res = 0;</span><br><span class="line">    for (int i = x; i; i -= lowbit(i))</span><br><span class="line">        res += tr[i];</span><br><span class="line">    return res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void add(int x, int v)</span><br><span class="line">&#123;</span><br><span class="line">    for (int i = x; i &lt;= n; i += lowbit(i))</span><br><span class="line">        tr[i] += v;</span><br><span class="line">&#125;</span><br><span class="line">	 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" data-id="clu2h2fa5000hgsx01nbd41yd" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-数据结构/字符串哈希" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" class="article-date">
+  <time class="dt-published" datetime="2024-03-22T09:33:55.918Z" itemprop="datePublished">2024-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>把字符串看成一个27进制数</p>
+<p>第k位的字符为第i个</p>
+<p>哈希值为</p>
+<p>∑i*27的 k 次方</p>
+<p>unsigned int 可以取模（自然溢出）</p>
+<p>有时候需要取两种模成为一个 pair ，两个字符串的 pair 相同的时候字符串才认为相等</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%93%88%E5%B8%8C/" data-id="clu2h2fa3000egsx0h2th13su" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-数据结构/字典树" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%AD%97%E5%85%B8%E6%A0%91/" class="article-date">
+  <time class="dt-published" datetime="2024-03-22T09:33:55.915Z" itemprop="datePublished">2024-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/assets/Pasted%20image%2020231101201640.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int N = 1e5, M = 30;</span><br><span class="line">int trie[N][M]; // N:节点个数，一般用字符串的最大长度×字符串个数</span><br><span class="line">                // M:字符个数</span><br><span class="line">                //一般来说不能用longlong类型,因为N*M的值比较大,容易超内存</span><br><span class="line">                // trie[p][v]=在字典树中,编号为p的节点的第v条边连接的下一个节点编号</span><br><span class="line">                //字典树提前给每个节点做好一条边,这条边可能指向下一个节点,也可能指向空的位置</span><br><span class="line">                //边的编号对应该种字符的编号</span><br><span class="line">int idx;    //记录当前的节点编号</span><br><span class="line">int tot[N]; //记录以当前节点为结束的字符串个数</span><br><span class="line">void trie_insert(string s)</span><br><span class="line">&#123;</span><br><span class="line">    int p = 0;       //起始节点从根节点0开始</span><br><span class="line">    for (auto c : s) //依次遍历字符串的各个字符</span><br><span class="line">    &#123;</span><br><span class="line">        int v = c - &#x27;a&#x27;;        //看这个字符对应第几条边</span><br><span class="line">        if (!trie[p][v])        //如果当前节点的v边是指向空</span><br><span class="line">            trie[p][v] = ++idx; //就添加一个新的节点</span><br><span class="line">        p = trie[p][v];         //节点转移</span><br><span class="line">    &#125;</span><br><span class="line">    tot[p]++; //记录这个字符串s是在p这个节点结束的</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int trie_search(string s)</span><br><span class="line">&#123;</span><br><span class="line">    int p = 0;       //当前节点</span><br><span class="line">    for (auto c : s) //遍历字符串</span><br><span class="line">    &#123;</span><br><span class="line">        int v = c - &#x27;a&#x27;;</span><br><span class="line">        if (trie[p][v])     //如果当前点的第v条边有指向节点</span><br><span class="line">            p = trie[p][v]; //转移当前节点</span><br><span class="line">        else</span><br><span class="line">            return 0; //没有指向节点就是找不到</span><br><span class="line">    &#125;</span><br><span class="line">    //循环结束,p应该等于以这个字符串为结束的节点</span><br><span class="line">    return tot[p]; //返回以当前节点为结束的字符串个数</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">vector&lt;string&gt; s_sort;</span><br><span class="line">void trie_sort(vector&lt;string&gt; &amp;tmp, int p, string s)</span><br><span class="line">&#123;</span><br><span class="line">    for (int i = 1; i &lt;= tot[p]; i++)</span><br><span class="line">        tmp.push_back(s);</span><br><span class="line">    for (int i = 0; i &lt; M; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if (trie[p][i])</span><br><span class="line">            trie_sort(tmp, trie[p][i], s + (char)(&#x27;a&#x27; + i));</span><br><span class="line">    &#125;</span><br><span class="line">&#125; // tmp:返回的字符串数组的地址</span><br><span class="line">  // p:当前节点</span><br><span class="line">  // s:以当前节点结尾的字符串</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void trie_LCP(string &amp;s)</span><br><span class="line">&#123;</span><br><span class="line">    int flag = 0;</span><br><span class="line">    int p = 0;</span><br><span class="line">    while (1)</span><br><span class="line">    &#123;</span><br><span class="line">        flag = 0;</span><br><span class="line">        int bj = -1;</span><br><span class="line">        for (int i = 0; i &lt; M; i++)</span><br><span class="line">            if (trie[p][i])</span><br><span class="line">                flag++, bj = i;</span><br><span class="line">        if (flag == 1)</span><br><span class="line">            s.push_back((char)(bj + &#x27;a&#x27;)),p=trie[p][bj];</span><br><span class="line">        else</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    string s;</span><br><span class="line">    trie_insert(s);       //将s这个字符串加入字典树中</span><br><span class="line">    (bool)trie_search(s); //判断字符串s在不在字典树中 如果存在返回1，不存在返回0</span><br><span class="line">    trie_search(s);       //统计字典树中有多少个字符串s,返回值为s的个数</span><br><span class="line">    string tmp;</span><br><span class="line">    trie_sort(s_sort, 0, tmp); //求当前树上字符串按照顺序排序</span><br><span class="line">                               //排序规则: 字符对应的序号,小的在前</span><br><span class="line">    trie_LCP(s); //求最长公共前缀   </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%AD%97%E5%85%B8%E6%A0%91/" data-id="clu2h2fa4000fgsx0gy049rpw" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-数据结构/ST表" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/ST%E8%A1%A8/" class="article-date">
+  <time class="dt-published" datetime="2024-03-22T09:33:55.910Z" itemprop="datePublished">2024-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define int long long</span><br><span class="line">#define LL long long</span><br><span class="line">#define PII pair&lt;int, int&gt;</span><br><span class="line">#define umap unordered_map</span><br><span class="line">#define x first</span><br><span class="line">#define y second</span><br><span class="line">#define endl &quot;\n&quot;</span><br><span class="line">#define debug(x) cout &lt;&lt; #x &lt;&lt; &#x27; &#x27; &lt;&lt; x &lt;&lt; endl;</span><br><span class="line">#define fg cout &lt;&lt; &quot;-----------------&quot; &lt;&lt; endl;</span><br><span class="line">signed main()</span><br><span class="line">&#123;</span><br><span class="line">    // freopen(&quot;.in&quot;, &quot;r&quot;, stdin);</span><br><span class="line">    ios::sync_with_stdio(0);</span><br><span class="line">    cin.tie(0);</span><br><span class="line">    cout.tie(0);</span><br><span class="line">    int n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    //计算总长度是2的几次方</span><br><span class="line">    //可以不做,数组开大点不影响</span><br><span class="line">    int l = 0;</span><br><span class="line">    while ((1 &lt;&lt; l) &lt;= n)</span><br><span class="line">        l++;</span><br><span class="line">    //初始化输入</span><br><span class="line">    vector&lt;vector&lt;int&gt;&gt; st(n + 1, vector&lt;int&gt;(l + 1));</span><br><span class="line">    for (int i = 1; i &lt;= n; i++)</span><br><span class="line">        cin &gt;&gt; st[i][0]; //输入直接放到st表里</span><br><span class="line">    //初始化st表</span><br><span class="line">    for (int j = 1; j &lt;= l; j++) //先循环长度开始</span><br><span class="line">    &#123;</span><br><span class="line">        for (int i = 1; i + (1 &lt;&lt; j) - 1 &lt;= n; i++) //循环左端点</span><br><span class="line">        &#123;</span><br><span class="line">            st[i][j] = max(st[i][j - 1], st[i + (1 &lt;&lt; (j - 1))][j - 1]);</span><br><span class="line">            // cout &lt;&lt; i &lt;&lt; &#x27; &#x27; &lt;&lt; j &lt;&lt; &#x27; &#x27; &lt;&lt; st[i][j] &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //预处理长度的log值</span><br><span class="line">    vector&lt;int&gt; logn(n + 1, 0);</span><br><span class="line">    // 1的log为0</span><br><span class="line">    for (int i = 2; i &lt;= n; i++) //从2开始枚举到总长度n</span><br><span class="line">        logn[i] = logn[i &gt;&gt; 1] + 1;</span><br><span class="line">    // 处理问题</span><br><span class="line">    auto get = [&amp;](int l, int r)</span><br><span class="line">    &#123;</span><br><span class="line">        //获得[l,r]的最大值</span><br><span class="line">        if (l &gt; r)</span><br><span class="line">            swap(l, r);</span><br><span class="line">        int len = r - l + 1;</span><br><span class="line">        int loglen = logn[len];</span><br><span class="line">        return max(st[l][loglen], st[r - (1 &lt;&lt; loglen) + 1][loglen]);</span><br><span class="line">    &#125;;</span><br><span class="line">    while (m--)</span><br><span class="line">    &#123;</span><br><span class="line">        int l, r;</span><br><span class="line">        cin &gt;&gt; l &gt;&gt; r;</span><br><span class="line">        cout &lt;&lt; get(l, r) &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/ST%E8%A1%A8/" data-id="clu2h2fa2000cgsx0hqh67ozh" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/03/22/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/22/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/22/vscode/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/22/vim/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/22/trie%E7%9A%84%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
